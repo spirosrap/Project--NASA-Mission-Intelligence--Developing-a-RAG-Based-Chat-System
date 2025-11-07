@@ -1,0 +1,9 @@
+# Virtual environments / local tools
+.conda-env/
+
+# Secrets and user-specific configuration
+.env
+
+# Python build artifacts
+__pycache__/
+*.pyc

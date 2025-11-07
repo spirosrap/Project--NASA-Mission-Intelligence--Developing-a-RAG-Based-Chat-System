@@ -1,0 +1,56 @@
+2025-11-07 12:06:35,957 - INFO - Initializing ChromaDB Embedding Pipeline...
+2025-11-07 12:06:36,229 - INFO - Starting text data processing with update mode: replace
+2025-11-07 12:06:36,229 - INFO - Scanning directory: apollo13
+2025-11-07 12:06:36,230 - INFO - Found 1 text files in apollo13
+2025-11-07 12:06:36,230 - INFO - Total text files to process: 1
+2025-11-07 12:06:36,230 - INFO - Files by mission:
+2025-11-07 12:06:36,230 - INFO -   apollo_13: 1 files
+2025-11-07 12:06:37,237 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+2025-11-07 12:06:37,240 - ERROR - Error generating embedding: Error code: 401 - {'error': {'message': 'Incorrect API key provided: voc-2137**************************************1877. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-11-07 12:06:37,240 - ERROR - Error adding documents for apollo13/AS13_TEC_excerpt.txt: Error code: 401 - {'error': {'message': 'Incorrect API key provided: voc-2137**************************************1877. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-11-07 12:06:37,240 - INFO - ============================================================
+2025-11-07 12:06:37,240 - INFO - PROCESSING COMPLETE
+2025-11-07 12:06:37,241 - INFO - ============================================================
+2025-11-07 12:06:37,241 - INFO - Files processed: 1
+2025-11-07 12:06:37,241 - INFO - Total chunks created: 3
+2025-11-07 12:06:37,241 - INFO - Documents added to collection: 0
+2025-11-07 12:06:37,241 - INFO - Documents updated in collection: 0
+2025-11-07 12:06:37,241 - INFO - Documents skipped (already exist): 0
+2025-11-07 12:06:37,242 - INFO - Errors: 0
+2025-11-07 12:06:37,242 - INFO - Processing time: 1.01 seconds
+2025-11-07 12:06:37,242 - INFO - 
+Mission breakdown:
+2025-11-07 12:06:37,242 - INFO -   apollo_13: 1 files, 3 chunks
+2025-11-07 12:06:37,242 - INFO -     Added: 0, Updated: 0, Skipped: 0
+2025-11-07 12:06:37,247 - INFO - 
+Collection: chunk_spec_demo
+2025-11-07 12:06:37,248 - INFO - Total documents in collection: 0
+2025-11-07 12:06:37,248 - INFO - Pipeline completed successfully!
+2025-11-07 12:12:50,412 - INFO - Initializing ChromaDB Embedding Pipeline...
+2025-11-07 12:12:50,639 - INFO - Starting text data processing with update mode: replace
+2025-11-07 12:12:50,639 - INFO - Scanning directory: apollo13
+2025-11-07 12:12:50,640 - INFO - Found 1 text files in apollo13
+2025-11-07 12:12:50,640 - INFO - Total text files to process: 1
+2025-11-07 12:12:50,640 - INFO - Files by mission:
+2025-11-07 12:12:50,640 - INFO -   apollo_13: 1 files
+2025-11-07 12:12:52,740 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:12:53,657 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:12:54,740 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:12:54,804 - INFO - ============================================================
+2025-11-07 12:12:54,804 - INFO - PROCESSING COMPLETE
+2025-11-07 12:12:54,805 - INFO - ============================================================
+2025-11-07 12:12:54,805 - INFO - Files processed: 1
+2025-11-07 12:12:54,805 - INFO - Total chunks created: 3
+2025-11-07 12:12:54,805 - INFO - Documents added to collection: 3
+2025-11-07 12:12:54,805 - INFO - Documents updated in collection: 0
+2025-11-07 12:12:54,806 - INFO - Documents skipped (already exist): 0
+2025-11-07 12:12:54,806 - INFO - Errors: 0
+2025-11-07 12:12:54,806 - INFO - Processing time: 4.16 seconds
+2025-11-07 12:12:54,806 - INFO - 
+Mission breakdown:
+2025-11-07 12:12:54,806 - INFO -   apollo_13: 1 files, 3 chunks
+2025-11-07 12:12:54,806 - INFO -     Added: 3, Updated: 0, Skipped: 0
+2025-11-07 12:12:54,808 - INFO - 
+Collection: chunk_spec_demo
+2025-11-07 12:12:54,808 - INFO - Total documents in collection: 3
+2025-11-07 12:12:54,809 - INFO - Pipeline completed successfully!
