@@ -1,0 +1,58 @@
+{
+  "per_question": [
+    {
+      "id": "apollo13_q1",
+      "question": "What damaged Apollo 13's service module?",
+      "metrics": {
+        "answer_relevancy": 0.7172972685536639,
+        "faithfulness": 1.0,
+        "non_llm_context_precision_with_reference": 0.9999999999,
+        "bleu_score": 0.022649644482251104,
+        "rouge_score(mode=fmeasure)": 0.4516129032258065
+      }
+    },
+    {
+      "id": "apollo13_q2",
+      "question": "Which spacecraft served as a lifeboat for the Apollo 13 crew?",
+      "metrics": {
+        "answer_relevancy": 0.4374619560574895,
+        "faithfulness": 0.0,
+        "non_llm_context_precision_with_reference": 0.9999999999,
+        "bleu_score": 0.19445541215483542,
+        "rouge_score(mode=fmeasure)": 0.6190476190476191
+      }
+    }
+  ],
+  "summary": {
+    "answer_relevancy": {
+      "count": 2,
+      "mean": 0.5773796123055768,
+      "min": 0.4374619560574895,
+      "max": 0.7172972685536639
+    },
+    "faithfulness": {
+      "count": 2,
+      "mean": 0.5,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "non_llm_context_precision_with_reference": {
+      "count": 2,
+      "mean": 0.9999999999,
+      "min": 0.9999999999,
+      "max": 0.9999999999
+    },
+    "bleu_score": {
+      "count": 2,
+      "mean": 0.10855252831854326,
+      "min": 0.022649644482251104,
+      "max": 0.19445541215483542
+    },
+    "rouge_score(mode=fmeasure)": {
+      "count": 2,
+      "mean": 0.5353302611367128,
+      "min": 0.4516129032258065,
+      "max": 0.6190476190476191
+    }
+  }
+}
