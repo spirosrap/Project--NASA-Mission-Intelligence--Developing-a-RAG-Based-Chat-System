@@ -168,6 +168,18 @@ def main():
         # Retrieval settings
         st.subheader("🔍 Retrieval Settings")
         n_docs = st.slider("Documents to retrieve", 1, 10, 3)
+        mission_options = [
+            ("all", "All Missions"),
+            ("apollo_11", "Apollo 11"),
+            ("apollo_13", "Apollo 13"),
+            ("challenger", "Challenger")
+        ]
+        mission_filter_key = st.selectbox(
+            "Mission filter",
+            options=[opt[0] for opt in mission_options],
+            format_func=lambda key: dict(mission_options)[key],
+            help="Restrict retrieval to a single mission if desired"
+        )
         
         # Evaluation settings
         st.subheader("📊 Evaluation Settings")
@@ -214,7 +226,8 @@ def main():
                 docs_result = retrieve_documents(
                     collection, 
                     prompt, 
-                    n_docs
+                    n_docs,
+                    mission_filter_key
                 )
                 
                 # Format context
