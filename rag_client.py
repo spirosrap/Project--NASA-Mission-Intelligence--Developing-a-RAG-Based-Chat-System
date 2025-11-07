@@ -101,24 +101,60 @@ def retrieve_documents(collection, query: str, n_results: int = 3,
     except Exception as exc:
         return {"error": str(exc)}
 
-def format_context(documents: List[str], metadatas: List[Dict]) -> str:
+def format_context(documents: List[str], metadatas: List[Dict], distances: Optional[List[float]] = None) -> str:
     """Format retrieved documents into context"""
     if not documents:
         return ""
     
-    context_parts: List[str] = ["## Retrieved Context"]
+    entries: List[Dict] = []
+    for idx, (doc, metadata) in enumerate(zip(documents, metadatas)):
+        distance = None
+        if distances and idx < len(distances):
+            distance = distances[idx]
+        entries.append({
+            "doc": doc,
+            "metadata": metadata,
+            "distance": distance,
+            "index": idx
+        })
 
-    for idx, (doc, metadata) in enumerate(zip(documents, metadatas), start=1):
+    if any(entry["distance"] is not None for entry in entries):
+        entries.sort(key=lambda e: (e["distance"] if e["distance"] is not None else float('inf'), e["index"]))
+
+    seen_ids = set()
+    unique_entries = []
+    for entry in entries:
+        metadata = entry["metadata"]
+        doc_id = metadata.get("document_id") or f"{metadata.get('source')}::{metadata.get('chunk_index')}"
+        if doc_id in seen_ids:
+            continue
+        seen_ids.add(doc_id)
+        unique_entries.append(entry)
+
+    context_parts: List[str] = ["## Retrieved Context"]
+    separator = "\n" + "-" * 80 + "\n"
+
+    for display_idx, entry in enumerate(unique_entries, start=1):
+        metadata = entry["metadata"]
         mission = metadata.get("mission", "unknown").replace("_", " ").title()
         source = metadata.get("source") or metadata.get("file_path", "Unknown Source")
         category = metadata.get("document_category", "general").replace("_", " ").title()
+        distance = entry["distance"]
 
-        header = f"[{idx}] {mission} • {source} • {category}"
+        score_text = ""
+        if distance is not None:
+            score_text = f" • Score: {distance:.3f}"
+
+        header = f"[{display_idx}] {mission} • {source} • {category}{score_text}"
         context_parts.append(header)
 
-        snippet = doc.strip()
+        snippet = entry["doc"].strip()
         if len(snippet) > 600:
             snippet = snippet[:600].rstrip() + "..."
         context_parts.append(snippet)
+        context_parts.append(separator)
 
-    return "\n\n".join(context_parts)
+    if context_parts and context_parts[-1] == separator:
+        context_parts.pop()
+
+    return "\n".join(context_parts)
