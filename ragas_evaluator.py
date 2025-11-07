@@ -46,6 +46,16 @@ def evaluate_response_quality(question: str, answer: str, contexts: List[str]) -
     if not RAGAS_AVAILABLE:
         return {"error": "RAGAS not available"}
 
+    question = (question or "").strip()
+    answer = (answer or "").strip()
+    contexts = contexts or []
+    cleaned_contexts = [ctx for ctx in (c.strip() for c in contexts) if ctx]
+
+    if not question or not answer:
+        return {"error": "Question and answer are required for RAGAS evaluation"}
+    if not cleaned_contexts:
+        return {"error": "At least one retrieved context snippet is required"}
+
     from os import getenv
 
     api_key = (
@@ -63,9 +73,9 @@ def evaluate_response_quality(question: str, answer: str, contexts: List[str]) -
     sample = SingleTurnSample(
         user_input=question,
         response=answer,
-        retrieved_contexts=contexts or [],
-        reference_contexts=contexts or [],
-        reference=" ".join(contexts) if contexts else "",
+        retrieved_contexts=cleaned_contexts,
+        reference_contexts=cleaned_contexts,
+        reference=" ".join(cleaned_contexts),
     )
     from ragas import EvaluationDataset
     dataset = EvaluationDataset(samples=[sample])
