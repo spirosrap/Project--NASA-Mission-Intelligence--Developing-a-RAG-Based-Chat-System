@@ -54,3 +54,71 @@ Mission breakdown:
 Collection: chunk_spec_demo
 2025-11-07 12:12:54,808 - INFO - Total documents in collection: 3
 2025-11-07 12:12:54,809 - INFO - Pipeline completed successfully!
+2025-11-07 12:27:30,809 - INFO - Initializing ChromaDB Embedding Pipeline...
+2025-11-07 12:27:31,042 - INFO - Starting text data processing with update mode: skip
+2025-11-07 12:27:31,042 - INFO - Scanning directory: apollo13
+2025-11-07 12:27:31,042 - INFO - Found 1 text files in apollo13
+2025-11-07 12:27:31,042 - INFO - Total text files to process: 1
+2025-11-07 12:27:31,042 - INFO - Files by mission:
+2025-11-07 12:27:31,042 - INFO -   apollo_13: 1 files
+2025-11-07 12:27:31,053 - INFO - ============================================================
+2025-11-07 12:27:31,053 - INFO - PROCESSING COMPLETE
+2025-11-07 12:27:31,053 - INFO - ============================================================
+2025-11-07 12:27:31,053 - INFO - Files processed: 1
+2025-11-07 12:27:31,053 - INFO - Total chunks created: 3
+2025-11-07 12:27:31,053 - INFO - Documents added to collection: 0
+2025-11-07 12:27:31,053 - INFO - Documents updated in collection: 0
+2025-11-07 12:27:31,053 - INFO - Documents skipped (already exist): 3
+2025-11-07 12:27:31,054 - INFO - Errors: 0
+2025-11-07 12:27:31,054 - INFO - Processing time: 0.01 seconds
+2025-11-07 12:27:31,054 - INFO - 
+Mission breakdown:
+2025-11-07 12:27:31,054 - INFO -   apollo_13: 1 files, 3 chunks
+2025-11-07 12:27:31,054 - INFO -     Added: 0, Updated: 0, Skipped: 3
+2025-11-07 12:27:31,055 - INFO - 
+Collection: chunk_spec_demo
+2025-11-07 12:27:31,055 - INFO - Total documents in collection: 3
+2025-11-07 12:27:31,055 - INFO - Pipeline completed successfully!
+2025-11-07 12:27:45,081 - INFO - Initializing ChromaDB Embedding Pipeline...
+2025-11-07 12:27:45,305 - INFO - Starting text data processing with update mode: update
+2025-11-07 12:27:45,305 - INFO - Scanning directory: apollo13
+2025-11-07 12:27:45,306 - INFO - Found 1 text files in apollo13
+2025-11-07 12:27:45,306 - INFO - Total text files to process: 1
+2025-11-07 12:27:45,306 - INFO - Files by mission:
+2025-11-07 12:27:45,306 - INFO -   apollo_13: 1 files
+2025-11-07 12:27:47,329 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:27:47,834 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:27:48,957 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-07 12:27:48,997 - INFO - ============================================================
+2025-11-07 12:27:48,998 - INFO - PROCESSING COMPLETE
+2025-11-07 12:27:48,998 - INFO - ============================================================
+2025-11-07 12:27:48,998 - INFO - Files processed: 1
+2025-11-07 12:27:48,999 - INFO - Total chunks created: 3
+2025-11-07 12:27:48,999 - INFO - Documents added to collection: 0
+2025-11-07 12:27:48,999 - INFO - Documents updated in collection: 3
+2025-11-07 12:27:48,999 - INFO - Documents skipped (already exist): 0
+2025-11-07 12:27:49,000 - INFO - Errors: 0
+2025-11-07 12:27:49,000 - INFO - Processing time: 3.69 seconds
+2025-11-07 12:27:49,000 - INFO - 
+Mission breakdown:
+2025-11-07 12:27:49,001 - INFO -   apollo_13: 1 files, 3 chunks
+2025-11-07 12:27:49,001 - INFO -     Added: 0, Updated: 3, Skipped: 0
+2025-11-07 12:27:49,005 - INFO - 
+Collection: chunk_spec_demo
+2025-11-07 12:27:49,006 - INFO - Total documents in collection: 3
+2025-11-07 12:27:49,006 - INFO - Pipeline completed successfully!
+2025-11-07 12:31:02,928 - INFO - Initializing ChromaDB Embedding Pipeline...
+2025-11-07 12:31:03,180 - INFO - Collection Statistics
+2025-11-07 12:31:03,180 - INFO - ----------------------------------------
+2025-11-07 12:31:03,180 - INFO - Collection: chunk_spec_demo
+2025-11-07 12:31:03,180 - INFO - Persist Directory: ./chunk_demo_chroma
+2025-11-07 12:31:03,180 - INFO - Document Count: 3
+2025-11-07 12:31:03,180 - INFO - Total Chunks (documents stored): 3
+2025-11-07 12:31:03,180 - INFO - Missions:
+2025-11-07 12:31:03,180 - INFO -   apollo_13: 3
+2025-11-07 12:31:03,180 - INFO - Data Types:
+2025-11-07 12:31:03,180 - INFO -   document: 3
+2025-11-07 12:31:03,180 - INFO - Document Categories:
+2025-11-07 12:31:03,181 - INFO -   technical: 3
+2025-11-07 12:31:03,181 - INFO - File Types:
+2025-11-07 12:31:03,181 - INFO -   text: 3
