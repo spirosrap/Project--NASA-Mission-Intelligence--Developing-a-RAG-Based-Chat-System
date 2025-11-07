@@ -4,7 +4,7 @@
       "id": "apollo13_q1",
       "question": "What damaged Apollo 13's service module?",
       "metrics": {
-        "answer_relevancy": 0.7172972685536639,
+        "answer_relevancy": 0.7095664285484012,
         "faithfulness": 1.0,
         "non_llm_context_precision_with_reference": 0.9999999999,
         "bleu_score": 0.022649644482251104,
@@ -15,44 +15,77 @@
       "id": "apollo13_q2",
       "question": "Which spacecraft served as a lifeboat for the Apollo 13 crew?",
       "metrics": {
-        "answer_relevancy": 0.4374619560574895,
+        "answer_relevancy": 0.44462706227564186,
         "faithfulness": 0.0,
         "non_llm_context_precision_with_reference": 0.9999999999,
         "bleu_score": 0.19445541215483542,
         "rouge_score(mode=fmeasure)": 0.6190476190476191
       }
+    },
+    {
+      "id": "apollo13_q3",
+      "question": "How long after launch did the Apollo 13 oxygen tank explode?",
+      "metrics": {
+        "answer_relevancy": 0.7683173565207583,
+        "faithfulness": 1.0,
+        "non_llm_context_precision_with_reference": 0.9999999999,
+        "bleu_score": 0.124233897447772,
+        "rouge_score(mode=fmeasure)": 0.3448275862068966
+      }
+    },
+    {
+      "id": "apollo13_q4",
+      "question": "What was the primary power conservation step taken after the explosion?",
+      "metrics": {
+        "answer_relevancy": 0.3747253608095252,
+        "faithfulness": 0.5,
+        "non_llm_context_precision_with_reference": 0.9999999999,
+        "bleu_score": 0.254005048740243,
+        "rouge_score(mode=fmeasure)": 0.7058823529411765
+      }
+    },
+    {
+      "id": "apollo13_q5",
+      "question": "What was NASA's immediate priority after the explosion?",
+      "metrics": {
+        "answer_relevancy": 0.5222128121746105,
+        "faithfulness": 0.5,
+        "non_llm_context_precision_with_reference": 0.9999999999,
+        "bleu_score": 0.1928921136468384,
+        "rouge_score(mode=fmeasure)": 0.5454545454545454
+      }
     }
   ],
   "summary": {
     "answer_relevancy": {
-      "count": 2,
-      "mean": 0.5773796123055768,
-      "min": 0.4374619560574895,
-      "max": 0.7172972685536639
+      "count": 5,
+      "mean": 0.5638898040657874,
+      "min": 0.3747253608095252,
+      "max": 0.7683173565207583
     },
     "faithfulness": {
-      "count": 2,
-      "mean": 0.5,
+      "count": 5,
+      "mean": 0.6,
       "min": 0.0,
       "max": 1.0
     },
     "non_llm_context_precision_with_reference": {
-      "count": 2,
+      "count": 5,
       "mean": 0.9999999999,
       "min": 0.9999999999,
       "max": 0.9999999999
     },
     "bleu_score": {
-      "count": 2,
-      "mean": 0.10855252831854326,
+      "count": 5,
+      "mean": 0.157647223294388,
       "min": 0.022649644482251104,
-      "max": 0.19445541215483542
+      "max": 0.254005048740243
     },
     "rouge_score(mode=fmeasure)": {
-      "count": 2,
-      "mean": 0.5353302611367128,
-      "min": 0.4516129032258065,
-      "max": 0.6190476190476191
+      "count": 5,
+      "mean": 0.5333650013752088,
+      "min": 0.3448275862068966,
+      "max": 0.7058823529411765
     }
   }
 }
